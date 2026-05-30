@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { 
   LayoutDashboard, Sparkles, History, Library, Award, Settings2, Compass, 
-  Home, Check, HelpCircle, Trophy, Sparkle, LogIn, Heart, Download, Trash2, Info
+  Home, Check, HelpCircle, Trophy, Sparkle, LogIn, Heart, Download, Trash2, Info,
+  Instagram, AtSign
 } from "lucide-react";
 
 // Types
@@ -740,12 +741,56 @@ export default function App() {
       )}
 
       {/* Human humble footer */}
-      <footer className="py-8 text-center text-xs text-gray-400 select-none border-t border-gray-150/40 dark:border-slate-800 bg-white/40 dark:bg-slate-950/20 max-w-7xl mx-auto rounded-3xl mt-12 mb-6">
-        <p className="flex items-center justify-center space-x-1">
-          <span>&copy; {new Date().getFullYear()} Roadmapin. Dibuat dengan</span>
-          <Heart className="w-3.5 h-3.5 text-red-500 fill-current" />
-          <span>untuk membantu siswa Indonesia belajar cerdas.</span>
+      <footer className="no-print py-10 px-6 text-center text-xs text-slate-400 selection:bg-indigo-500 border-t border-slate-150/10 dark:border-slate-800/60 bg-gradient-to-b from-transparent to-slate-50/50 dark:to-slate-950/20 max-w-7xl mx-auto rounded-3xl mt-16 mb-8 flex flex-col items-center justify-center space-y-4">
+        <div className="flex items-center space-x-2" id="footer-branding-label">
+          <span className="text-sm font-extrabold text-slate-900 dark:text-slate-100 tracking-tight uppercase">Roadmap<span className="text-indigo-600 dark:text-indigo-400 font-black">in</span></span>
+          <span className="h-4 w-[1px] bg-slate-200 dark:bg-slate-800"></span>
+          <p className="text-[11px] font-sans font-bold text-slate-500 dark:text-slate-400 tracking-wide uppercase">Kurikulum & Roadmap Belajar Mandiri</p>
+        </div>
+        
+        <p className="text-slate-500 dark:text-slate-400 text-[11px] font-medium max-w-md leading-relaxed font-sans">
+          Membantu siswa & pembelajar mandiri di Indonesia menyusun rencana belajar berbasis AI secara terfokus, bertahap, dan komprehensif.
         </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 pt-2 text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 font-sans">
+          <span>&copy; {new Date().getFullYear()} Roadmapin</span>
+          <span className="hidden sm:inline-block text-slate-300 dark:text-slate-800">&bull;</span>
+          <span className="flex items-center space-x-1.5 py-1 px-3 bg-slate-50 dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/80 rounded-full text-slate-800 dark:text-slate-300 hover:scale-105 active:scale-95 transition-all">
+            <span>Dirancang oleh</span> 
+            <span className="text-indigo-600 dark:text-indigo-400 font-black tracking-normal lowercase text-xs first-letter:uppercase">vicky</span>
+          </span>
+          <span className="hidden sm:inline-block text-slate-300 dark:text-slate-800">&bull;</span>
+          <span className="flex items-center space-x-1">
+            <span>Dibuat dengan</span>
+            <Heart className="w-3.5 h-3.5 text-red-500 fill-current animate-pulse" />
+            <span>untuk Indonesia</span>
+          </span>
+        </div>
+
+        {/* Brand Elegant Social Media Integration */}
+        <div className="flex items-center justify-center gap-2.5 pt-1.5" id="vicky-footer-socials">
+          <a
+            href="https://instagram.com/mvckyprytna_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-1.5 px-3.5 py-1.5 bg-gradient-to-r from-pink-500/10 to-purple-500/10 hover:from-pink-500/20 hover:to-purple-500/20 dark:from-pink-500/5 dark:to-purple-500/5 border border-pink-500/20 hover:border-pink-500/40 rounded-full text-slate-700 dark:text-slate-300 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
+            title="Ikuti Instagram @mvckyprytna_"
+          >
+            <Instagram className="w-3.5 h-3.5 text-pink-500 dark:text-pink-400" />
+            <span className="text-[10px] lowercase font-extrabold tracking-tight font-sans">instagram: @mvckyprytna_</span>
+          </a>
+
+          <a
+            href="https://tiktok.com/@mvckyprytna_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-1.5 px-3.5 py-1.5 bg-gradient-to-r from-teal-500/10 to-slate-900/10 hover:from-teal-500/20 hover:to-slate-900/20 dark:from-teal-500/5 dark:to-slate-900/5 border border-teal-505/20 hover:border-teal-500/40 rounded-full text-slate-700 dark:text-slate-300 transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
+            title="Ikuti TikTok @mvckyprytna_"
+          >
+            <AtSign className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+            <span className="text-[10px] lowercase font-extrabold tracking-tight font-sans">tiktok: @mvckyprytna_</span>
+          </a>
+        </div>
       </footer>
     </div>
   );
